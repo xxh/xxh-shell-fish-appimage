@@ -6,7 +6,7 @@ Install [xxh](https://github.com/xxh/xxh) and run `xxh --help` once and then:
 cd ~/.xxh/xxh/shells/
 git clone https://github.com/xxh/xxh-shell-fish-appimage
 ./xxh-shell-fish-appimage/build.xsh
-xxh myhost +s xxh-fish-xonsh-appimage
+xxh myhost +s xxh-shell-fish-appimage
 ```
 To avoid adding `+s` every time use xxh config `~/.xxh/.xxhc`:
 ```
