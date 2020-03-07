@@ -20,3 +20,6 @@ After this you could do `xxh myhost` without arguments.
 * [fish-shell / Publish AppImage](https://github.com/fish-shell/fish-shell/issues/6475)
 * [fish-shell / Portable fish shell](https://github.com/fish-shell/fish-shell/issues/3095)
 * [Download fish AppImage](https://download.opensuse.org/repositories/shells:/fish:/nightly:/master/AppImage/)
+
+## Thanks
+* @probonopd for https://github.com/AppImage
