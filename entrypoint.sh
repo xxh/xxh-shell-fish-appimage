@@ -5,7 +5,7 @@
 #case "${option}"
 #in
 #f) EXECUTE_FILE=${OPTARG};;
-#c) EXECUTE_COMMAND=${OPTARG};;  # https://github.com/xonssh/xxh/issues/36
+#c) EXECUTE_COMMAND=${OPTARG};;
 #v) VERBOSE=${OPTARG};;
 #esac
 #done
