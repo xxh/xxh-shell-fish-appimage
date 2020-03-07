@@ -22,7 +22,8 @@ if [[ ! -f .fish-check-done ]]; then
     #mv squashfs-root fish-squashfs
     #mv fish fish-disabled
     #ln -s ./fish-squashfs/usr/bin/fish fish
-    echo "AppImage is unsupported on host"
+    echo "AppImage is unsupported on host:"
+    echo $check_result
   fi
   echo $check_result > .fish-check-done
 fi
