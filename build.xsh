@@ -4,7 +4,7 @@ import sys
 from sys import exit
 from shutil import which
 
-appimage_url = 'https://download.opensuse.org/repositories/shells:/fish:/nightly:/master/AppImage/fish-3.1.0+314.g6f22aadaf-lp151.1.1.Build1.1.glibc2.25-x86_64.AppImage'
+appimage_url = 'https://download.opensuse.org/repositories/shells:/fish:/nightly:/master/AppImage/fish-latest-x86_64.AppImage'
 
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
