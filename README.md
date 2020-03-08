@@ -1,4 +1,4 @@
-Xxh entrypoint for fish shell appimage. Help wanted for testing and improvement.
+[Xxh](https://github.com/xxh/xxh) entrypoint for fish shell appimage. Help wanted for testing and improvement.
 
 ## Install
 Install [xxh](https://github.com/xxh/xxh) and run `xxh --help` once and then:
