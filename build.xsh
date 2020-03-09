@@ -26,7 +26,7 @@ if not p'fish'.is_file():
             eprint(f'Error while download appimage using wget: {r}')
             exit(1)
     elif which('curl'):
-        r =![curl @(appimage_url) -o @(appimage_name)]
+        r =![curl -L @(appimage_url) -o @(appimage_name)]
         if r.returncode != 0:
             eprint(f'Error while download appimage using curl: {r}')
             exit(1)
