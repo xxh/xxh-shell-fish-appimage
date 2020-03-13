@@ -14,7 +14,7 @@ CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd $CURRENT_DIR
 
 # Check FUSE support
-if [[ ! -f .fish-check-done ]]; then
+if [[ ! -f .entrypoint-check-done ]]; then
   check_result=`./fish --version 2>&1`
   if [[ $check_result != *"version"* ]]; then
     # TODO: Extract AppImage if FUSE is unsupported
@@ -25,7 +25,7 @@ if [[ ! -f .fish-check-done ]]; then
     echo "Something went wrong:"
     echo $check_result
   else
-    echo $check_result > .fish-check-done
+    echo $check_result > .entrypoint-check-done
   fi
 fi
 
