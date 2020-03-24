@@ -1,10 +1,19 @@
 [Xxh](https://github.com/xxh/xxh) entrypoint for fish shell appimage. Help wanted for testing and improvement.
 
 ## Install
-Install [xxh](https://github.com/xxh/xxh) and run `xxh --help` once and then:
+Install from xxh repo:
 ```
 xxh +I xxh-shell-fish-appimage
-xxh myhost +s xxh-shell-fish-appimage
+```
+Install from any repo:
+```
+cd ~/.xxh/xxh/plugins \
+    && git clone --depth 1 https://github.com/xxh/xxh-shell-fish-appimage \
+    && ./xxh-shell-fish-appimage/build.sh
+```
+Connect:
+``` 
+xxh yourhost +s xxh-shell-fish-appimage +if
 ```
 To avoid adding `+s` every time use xxh config `~/.xxh/.xxhc`:
 ```
