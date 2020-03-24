@@ -17,11 +17,13 @@ cd $CURRENT_DIR
 if [[ ! -f .entrypoint-check-done ]]; then
   check_result=`./fish --version 2>&1`
   if [[ $check_result != *"version"* ]]; then
-    # TODO: Extract AppImage if FUSE is unsupported
-    #./fish --appimage-extract > /dev/null
-    #mv squashfs-root fish-squashfs
-    #mv fish fish-disabled
-    #ln -s ./fish-squashfs/usr/bin/fish fish
+    if ! command -v fusermount >/dev/null 2>&1 ; then
+      echo "Now extracting the AppImage."
+      ./fish --appimage-extract > /dev/null
+      mv squashfs-root fish-squashfs
+      mv fish fish-disabled
+      ln -s ./fish-squashfs/usr/bin/fish fish
+    fi
     echo "Something went wrong:"
     echo $check_result
   else
