@@ -10,7 +10,7 @@ To avoid adding `+s` every time use xxh config `~/.xxh/.xxhc`:
 ```
 hosts:
   ".*":                             # Regex pattern means any host
-    +s: xxh-fish-xonsh-appimage
+    +s: xxh-shell-fish-appimage
 ```
 After this you could do `xxh myhost` without arguments.
 
