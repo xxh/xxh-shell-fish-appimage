@@ -3,9 +3,7 @@
 ## Install
 Install [xxh](https://github.com/xxh/xxh) and run `xxh --help` once and then:
 ```
-cd ~/.xxh/xxh/shells/
-git clone https://github.com/xxh/xxh-shell-fish-appimage
-./xxh-shell-fish-appimage/build.sh
+xxh +I xxh-shell-fish-appimage
 xxh myhost +s xxh-shell-fish-appimage
 ```
 To avoid adding `+s` every time use xxh config `~/.xxh/.xxhc`:
