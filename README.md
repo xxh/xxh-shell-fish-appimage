@@ -7,9 +7,7 @@ xxh +I xxh-shell-fish-appimage
 ```
 Install from any repo:
 ```
-cd ~/.xxh/xxh/plugins \
-    && git clone --depth 1 https://github.com/xxh/xxh-shell-fish-appimage \
-    && ./xxh-shell-fish-appimage/build.sh
+xxh +I xxh-shell-fish-appimage+git+https://github.com/xxh/xxh-shell-fish-appimage
 ```
 Connect:
 ``` 
