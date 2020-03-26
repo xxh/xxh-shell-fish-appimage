@@ -1,3 +1,6 @@
+### Note! Fish AppImage is unstable and we recommend to use [xxh-shell-fish](https://github.com/xxh/xxh-shell-fish)
+
+
 [Xxh](https://github.com/xxh/xxh) entrypoint for fish shell appimage. Help wanted for testing and improvement.
 
 ## Install
