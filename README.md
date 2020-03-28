@@ -14,13 +14,13 @@ xxh +I xxh-shell-fish-appimage+git+https://github.com/xxh/xxh-shell-fish-appimag
 ```
 Connect:
 ``` 
-xxh yourhost +s xxh-shell-fish-appimage +if
+xxh yourhost +s fish-appimage +if
 ```
 To avoid adding `+s` every time use xxh config `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                             # Regex pattern means any host
-    +s: xxh-shell-fish-appimage
+    +s: fish-appimage
 ```
 After this you could do `xxh myhost` without arguments.
 
