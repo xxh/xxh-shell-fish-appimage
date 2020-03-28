@@ -16,7 +16,7 @@ Connect:
 ``` 
 xxh yourhost +s xxh-shell-fish-appimage +if
 ```
-To avoid adding `+s` every time use xxh config `~/.xxh/.xxhc`:
+To avoid adding `+s` every time use xxh config `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                             # Regex pattern means any host
