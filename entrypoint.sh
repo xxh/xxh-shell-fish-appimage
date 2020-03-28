@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts f:c:C:v:e:b: option
+while getopts f:c:C:v:e:b:H: option
 do
 case "${option}"
 in
@@ -10,6 +10,7 @@ C) EXECUTE_COMMAND_B64=${OPTARG};;
 v) VERBOSE=${OPTARG};;
 e) ENV+=("$OPTARG");;
 b) EBASH+=("$OPTARG");;
+H) HOMEPATH=${OPTARG};;
 esac
 done
 
@@ -42,6 +43,19 @@ cd $CURRENT_DIR
 export XXH_HOME=`readlink -f $CURRENT_DIR/../../../..`
 export XDG_CONFIG_HOME=$XXH_HOME/.config
 
+if [[ $HOMEPATH != '' ]]; then
+  homerealpath=`readlink -f $HOMEPATH`
+  if [[ -d $homerealpath ]]; then
+    export HOME=$homerealpath
+  else
+    echo "Home path not found: $homerealpath"
+    echo "Set HOME to $XXH_HOME"
+    export HOME=$XXH_HOME
+  fi
+else
+  export HOME=$XXH_HOME
+fi
+
 # Check FUSE support
 if [[ ! -f .entrypoint-check-done ]]; then
   check_result=`./fish --version 2>&1`
@@ -60,8 +74,8 @@ if [[ ! -f .entrypoint-check-done ]]; then
   echo $check_result > .entrypoint-check-done
 fi
 
-if [[ -d $XXH_HOME/xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs ]]; then
-  export LD_LIBRARY_PATH=$XXH_HOME/xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs/lib64:$XXH_HOME/xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs/usr/lib64:$LD_LIBRARY_PATH
+if [[ -d $XXH_HOME/.xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs ]]; then
+  export LD_LIBRARY_PATH=$XXH_HOME/.xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs/lib64:$XXH_HOME/.xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs/usr/lib64:$LD_LIBRARY_PATH
   if [[ $XXH_VERBOSE == '2' ]]; then
     echo "Added fish AppImage libs to LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
   fi
