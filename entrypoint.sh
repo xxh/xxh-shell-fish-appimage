@@ -41,7 +41,6 @@ CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd $CURRENT_DIR
 
 export XXH_HOME=`readlink -f $CURRENT_DIR/../../../..`
-export XDG_CONFIG_HOME=$XXH_HOME/.config
 
 if [[ $HOMEPATH != '' ]]; then
   homerealpath=`readlink -f $HOMEPATH`
@@ -55,6 +54,10 @@ if [[ $HOMEPATH != '' ]]; then
 else
   export HOME=$XXH_HOME
 fi
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+
 
 # Check FUSE support
 if [[ ! -f .entrypoint-check-done ]]; then
