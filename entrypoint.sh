@@ -108,4 +108,14 @@ if [[ -d $XXH_HOME/.xxh/shells/xxh-shell-fish-appimage/build/fish-squashfs ]]; t
   fi
 fi
 
+for pluginrc_file in $(find $CURRENT_DIR/../../../plugins/xxh-plugin-prerun-*/build -type f -name '*pluginrc.sh' -printf '%f\t%p\n' 2>/dev/null | sort -k1 | cut -f2); do
+  if [[ -f $pluginrc_file ]]; then
+    if [[ $XXH_VERBOSE == '1' ]]; then
+      echo Load plugin $pluginrc_file
+    fi
+    #cd $(dirname $pluginrc_file)
+    source $pluginrc_file
+  fi
+done
+
 ./fish "${EXECUTE_COMMAND[@]}"  # TODO: $EXECUTE_FILE
