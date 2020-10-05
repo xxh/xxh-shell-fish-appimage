@@ -1,7 +1,10 @@
-### Note! Fish AppImage is unstable and we recommend to use [xxh-shell-fish](https://github.com/xxh/xxh-shell-fish)
+<p align="center">
+<b>Note!</b> <a href="https://github.com/fish-shell/fish-shell/issues/6475">Fish AppImage is unstable</a> and we recommend to use <a href="https://github.com/xxh/xxh-shell-fish">xxh-shell-fish</a>
+</p>
 
-
-[Xxh](https://github.com/xxh/xxh) entrypoint for fish shell appimage. Help wanted for testing and improvement.
+<p align="center">
+<b>xxh-shell-fish-appimage</b> is an <a href="https://github.com/xxh/xxh">xxh</a> entrypoint for fish shell AppImage. Help wanted for testing and improvement.
+</p>
 
 ## Install
 Install from xxh repo:
